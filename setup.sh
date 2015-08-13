@@ -1,2 +1,7 @@
-sh /root/elk/atlantis-kibana/scripts/kibana-setup.sh
-sh /root/elk/atlantis-kibana/scripts/create-es-kibana-index.sh
+REPONAME="atlantis-kibana"
+REPOPATH="/root/elk"
+REPODIR="${REPOPATH}/${REPONAME}"
+SCRIPTSDIR="${REPODIR}/scripts"
+
+sh "${SCRIPTSDIR}/kibana-setup.sh"
+sh "${SCRIPTSDIR}/create-es-kibana-index.sh"

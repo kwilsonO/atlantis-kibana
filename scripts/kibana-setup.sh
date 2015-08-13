@@ -1,3 +1,10 @@
-wget "https://download.elastic.co/kibana/kibana/kibana-4.1.1-linux-x64.tar.gz"
-tar -xzf kibana-4.1.1-linux-x64.tar.gz
-rm *.gz
+KIBANAVER="kibana-4.1.1-linux-x64"
+KIBANADL="https://download.elastic.co/kibana/kibana/${KIBANAVER}.tar.gz"
+ATLANTISLOGDIR="/var/log/atlantis"
+KIBANALOGDIR="${ATLANTISLOGDIR}/kibana"
+
+mkdir "${ATLANTISLOGDIR}"
+mkdir "${KIBANALOGDIR}"
+wget "${KIBANADL}"
+tar -xzf "${KIBANAVER}.tar.gz"	
+rm "${KIBANAVER}.tar.gz"
