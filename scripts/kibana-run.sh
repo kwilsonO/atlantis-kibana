@@ -5,5 +5,14 @@ REPODIR="${REPOPATH}/${REPONAME}"
 ATLANTISLOGDIR="/var/log/atlantis"
 KIBANALOGDIR="${ATLANTISLOGDIR}/kibana"
 
-rm "${KIBANALOGDIR}/*"
+if [ -e "${KIBANALOGDIR}/out.log" ]; then
+	
+	rm "${KIBANALOGDIR}/out.log"
+fi
+
+if [ -e "${KIBANALOGDIR}/err.log" ]; then
+	
+	rm "${KIBANALOGDIR}/err.log"
+fi
+
 $REPODIR/bin/kibana > "${KIBANALOGDIR}/out.log" 2> "${KIBANALOGDIR}/err.log" &
