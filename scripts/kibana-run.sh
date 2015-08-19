@@ -4,6 +4,7 @@ REPOPATH="/root/elk"
 REPODIR="${REPOPATH}/${REPONAME}"
 ATLANTISLOGDIR="/var/log/atlantis"
 KIBANALOGDIR="${ATLANTISLOGDIR}/kibana"
+CONFIGDIR="${REPODIR}/config-files"
 
 if [ -e "${KIBANALOGDIR}/out.log" ]; then
 	
@@ -15,4 +16,4 @@ if [ -e "${KIBANALOGDIR}/err.log" ]; then
 	rm "${KIBANALOGDIR}/err.log"
 fi
 
-$REPODIR/bin/kibana > "${KIBANALOGDIR}/out.log" 2> "${KIBANALOGDIR}/err.log" &
+$REPODIR/bin/kibana --config "${CONFIGDIR}/kibana.yaml" > "${KIBANALOGDIR}/out.log" 2> "${KIBANALOGDIR}/err.log" &
