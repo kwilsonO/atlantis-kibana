@@ -53,8 +53,8 @@ shard_timeout: 0
 verify_ssl: true
 
 # SSL for outgoing requests from the Kibana Server (PEM formatted)
- ssl_key_file: /root/elk/atlantis-kibana/secrets/aquarium-kibana.key
- ssl_cert_file: /root/elk/atlantis-kibana/secrets/aquarium-kibana.crt
+ssl_key_file: /root/elk/atlantis-kibana/secrets/aquarium-kibana.key
+ssl_cert_file: /root/elk/atlantis-kibana/secrets/aquarium-kibana.crt
 
 # Set the path to where you would like the process id file to be created.
 # pid_file: /var/run/kibana.pid
