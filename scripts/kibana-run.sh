@@ -4,7 +4,7 @@ REPOPATH="/root/elk/${REPONAME}"
 KIBANADIR="${REPOPATH}/${KIBANAVER}"
 ATLANTISLOGDIR="/var/log/atlantis"
 KIBANALOGDIR="${ATLANTISLOGDIR}/kibana"
-CONFIGDIR="${REPODIR}/config-files"
+CONFIGDIR="${REPOPATH}/config-files"
 
 if [ -e "${KIBANALOGDIR}/out.log" ]; then
 	
