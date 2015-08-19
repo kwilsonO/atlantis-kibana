@@ -16,4 +16,4 @@ if [ -e "${KIBANALOGDIR}/err.log" ]; then
 	rm "${KIBANALOGDIR}/err.log"
 fi
 
-$KIBANADIR/bin/kibana --config "${CONFIGDIR}/kibana.yaml" > "${KIBANALOGDIR}/out.log" 2> "${KIBANALOGDIR}/err.log" &
+$KIBANADIR/bin/kibana --config "${CONFIGDIR}/kibana.yml" > "${KIBANALOGDIR}/out.log" 2> "${KIBANALOGDIR}/err.log" &
